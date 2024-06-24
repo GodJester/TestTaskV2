@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: 'TestTaskV2Container'
+    hostname: TestTaskV2
+    image: postgres
+    ports: ["5431:5432"]
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=TestTaskV2
+    networks:
+      - my-network
+networks:
+  my-network:
+    name: existing_docker_network
+    driver: bridge

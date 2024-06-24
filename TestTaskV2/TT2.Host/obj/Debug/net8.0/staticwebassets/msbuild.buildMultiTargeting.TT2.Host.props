@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TT2.Host.props" />
+</Project>
